@@ -5,6 +5,7 @@
   <!--Enable equation writting//-->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
   <title>Logic exercises How to</title>
+  <link rel="stylesheet" href="./style.css" />
 </head lang="pt-br">
 <body>
   <div id="exercise1">
@@ -19,7 +20,18 @@
     <p><strong>Entrada do programa:</strong> Valor numérico representando o raio da circunferência.</p>
   </div>
   <div id="solution1">
-    
-  </div>
-
+    <pre>
+      <code> calculateArea() {</code>
+      <code>  const PI = 3.141592</code>
+      <code>  let radius = document.getElementById("radiusV").value</code>
+      <code>  document.getElementById("result").innerHTML = radius ** 2 * Math.PI</code>
+      <code> }</code>
+    </pre>
+    <div id="demo">
+      <label for="radiusV">Raio da Circunferência</label>
+      <input id="radiusV" name="radiusvalue" placeholder="Insira o valor da circunferência">
+      <div id="switch" onclick="calculateArea()"><button>Calculate</button></div>
+      <div id="result"></div>
+    </div>
+  <script src="./script.js"></script>
 </body>
