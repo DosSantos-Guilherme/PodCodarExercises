@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 pre {
   background-color: #eee;
   color: #000;
@@ -12,6 +17,17 @@ code {
 code::before {
   content: counter(line);
 }
+.exercise {
+  margin: auto;
+  width: 85%;
+}
+.equation {
+  background-color: blanchedalmond;
+  border-radius: 22px;
+  margin: auto;
+  max-width: 250px;
+}
+
 #switch {
   display: inline;
 }

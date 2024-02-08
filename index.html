@@ -8,43 +8,60 @@
   <link rel="stylesheet" href="./style.css" />
 </head lang="pt-br">
 <body>
-  <div id="exercise1">
+  <div class="exercise">
     <h1>Comprimento e área de uma circunferência</h1>
     <p>Um software foi desenvolvido para ajudar no gerenciamento de tarefas de um grupo de Agricultores incluídos em um programa de Agricultura Familiar. Uma das tarefas deste software é ajudar a calcular a área e o comprimento de um canteiro (com formato determinado pelo usuário). Essas informações seriam  úteis para calcular por exemplo a quantidade de mudas possíveis de se plantar e a quantidade de arames para fazer a cerca do canteiro.</p>
     <p>Um dos formatos possíveis para o canteiro é o formato circular, sua tarefa é fazer um programa para calcular a área e o comprimento de um canteiro cujo raio $R$ seja conhecido.</p>
     <p>Sabendo que a área de uma circunferência é dada por:</p>
     <!--$$ {J(\theta) =\frac{1}{2m} [\sum^m_{i=1}(h_\theta(x^{(i)}) - y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j} $$ //-->
-    $${A = \pi R^2}$$
+    <div class="equation">$${\pi R^2}$$ </div>
     <p>E o comprimento é dado por:</p>
-    $${C = 2 \pi R}$$
+    <div class="equation">$${C = 2 \pi R}$$</div>
     <p><strong>Entrada do programa:</strong> Valor numérico representando o raio da circunferência.</p>
     <h2>Desdobramento do Problema</h2>
     <p>Uma outra tarefa é determinar a quantidade de arame necessária para construir uma cerca para o canteiro. Sabendo que cada rolo de arame tenha 20 m , seu programa deve determinar também a quantidade de rolos de arame necessária.</p>
+      <div id="showResult" onclick="show_result()"><button>Mostrar resultado</button></div>
+      <div id="hideResult" onclick="hide_result()"><button>Esconder resultado</button></div>
+    <div id="solution1">
+      <pre>
+        <code> function calculateCircunference() {</code>
+        <code>  let radius = document.getElementById("radiusV").value</code>
+        <code>  let areaC = radius ** 2 * Math.PI</code>
+        <code>  let circC = 2 * Math.PI * radius</code>
+        <code>  document.getElementById("result").innerHTML =</code>
+        <code>    "Area = " +</code>
+        <code>    areaC +</code>
+        <code>    "&lt;br&gt;" +</code>
+        <code>    "Circunferência = " +</code>
+        <code>    circC +</code>
+        <code>    "&lt;br&gt;" +</code>
+        <code>    "Quantidade de arames=" +</code>
+        <code>    packsC</code>
+        <code> }</code>
+      </pre>
+      <div id="demo">
+        <label for="radiusV">Raio da Circunferência</label>
+        <input id="radiusV" name="radiusvalue" placeholder="Insira o valor da circunferência">
+        <div id="switch" onclick="calculateCircunference()"><button>Calculate</button></div>
+        <div id="result"></div>
+      </div>
   </div>
-  <div id="showResult" onclick="show_result()"><button>Mostrar resultado</button></div>
-  <div id="hideResult" onclick="hide_result()"><button>Esconder resultado</button></div>
-  <div id="solution1">
-    <pre>
-      <code> function calculateCircunference() {</code>
-      <code>  let radius = document.getElementById("radiusV").value</code>
-      <code>  let areaC = radius ** 2 * Math.PI</code>
-      <code>  let circC = 2 * Math.PI * radius</code>
-      <code>  document.getElementById("result").innerHTML =</code>
-      <code>    "Area = " +</code>
-      <code>    areaC +</code>
-      <code>    "&lt;br&gt;" +</code>
-      <code>    "Circunferência = " +</code>
-      <code>    circC +</code>
-      <code>    "&lt;br&gt;" +</code>
-      <code>    "Quantidade de arames=" +</code>
-      <code>    packsC</code>
-      <code> }</code>
-    </pre>
-    <div id="demo">
-      <label for="radiusV">Raio da Circunferência</label>
-      <input id="radiusV" name="radiusvalue" placeholder="Insira o valor da circunferência">
-      <div id="switch" onclick="calculateCircunference()"><button>Calculate</button></div>
-      <div id="result"></div>
-    </div>
+</div>
+<div class="exercise">
+    <h1>Conversor de Temperaturas</h1>
+
+    <p>Sabemos que por motivos históricos diferentes países adotam escalas diferentes para medir a temperatura. Essa arbitrariedade poderia gerar alguns desconfortos para pessoas utilizando um certo  serviço, como por exemplo um software de monitoramento de hardware, o qual precisa informar a temperatura do computador para pessoas em diferentes partes do mundo. Para evitar que uma pessoa no Brasil tenha que recorrer ao Google para encontrar a “~~maldita fórmula~~” (equação) que relaciona um valor de temperatura em **Fahrenheit (°F)**  com um valor na escala **Celsius (°C)***,* você deve fazer um programa em JavaScript para converter a temperatura de **Fahrenheit para Celsius,** sabendo que a equação que relaciona os dois valores é:</p>
+
+    <div class="equation">$${T_{C} = \frac{5}{9} \, (T_{F} - 32)}$$</div>
+
+    <p>Onde $T_{F}$ é o valor de temperatura em °F (padrão do programa) e $T_{C}$ o valor em °C ( a que queremos exibir).</p>
+
+    <p><strong>Entrada do programa:</strong> Valor numérico representando o temperatura em °F.</p>
+
+    <h2>Desdobramento do Problema:</h2>
+
+    <p>Faça um programa para permitir  converter de °C para °F.
+
+  </div>
   <script src="./script.js"></script>
 </body>
