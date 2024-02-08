@@ -15,3 +15,9 @@ code::before {
 #switch {
   display: inline;
 }
+#solution1 {
+  display: none;
+}
+#hideResult {
+  display: none;
+}

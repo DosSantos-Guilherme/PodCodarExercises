@@ -18,3 +18,32 @@ document.getElementById("radiusV").addEventListener("keydown", function (e) {
     calculateCircunference()
   }
 })
+
+function show_result() {
+  let element = document.getElementById("solution1")
+
+  if (element) {
+    let display = element.style.display
+    if (display == "none" || display == "") {
+      element.style.display = "block"
+      let show_button = document.getElementById("showResult")
+      let hide_button = document.getElementById("hideResult")
+      show_button.style.display = "none"
+      hide_button.style.display = "block"
+    }
+  }
+}
+
+function hide_result() {
+  let element = document.getElementById("solution1")
+  if (element) {
+    let display = element.style.display
+    if (display == "block") {
+      element.style.display = "none"
+      let show_button = document.getElementById("showResult")
+      let hide_button = document.getElementById("hideResult")
+      show_button.style.display = "block"
+      hide_button.style.display = "none"
+    }
+  }
+}
